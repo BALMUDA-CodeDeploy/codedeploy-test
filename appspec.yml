@@ -12,6 +12,9 @@ hooks:
       timeout: 300
       runas: root
   AfterInstall:
+    - location: scripts/restore_config.sh
+      timeout: 300
+      runas: root
     - location: scripts/change_permissions.sh
       timeout: 300
       runas: root
