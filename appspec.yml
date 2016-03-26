@@ -5,6 +5,9 @@ files:
     destination: /var/www/html/
 hooks:
   BeforeInstall:
+    - location: scripts/backup_config.sh
+      timeout: 300
+      runas: root
     - location: scripts/clean_source.sh
       timeout: 300
       runas: root
